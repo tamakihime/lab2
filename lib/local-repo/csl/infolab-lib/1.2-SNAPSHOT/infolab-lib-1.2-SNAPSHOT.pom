@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>csl</groupId>
+    <artifactId>infolab-lib</artifactId>
+    <version>1.2-SNAPSHOT</version>
+
+    <build>
+        <extensions>
+            <extension>
+                <groupId>org.apache.maven.wagon</groupId>
+                <artifactId>wagon-ssh</artifactId>
+                <version>3.0.0</version>
+            </extension>
+        </extensions>
+
+        <plugins>
+
+            <plugin>
+                <artifactId>maven-assembly-plugin</artifactId>
+                <configuration>
+                    <descriptorRefs>
+                        <descriptorRef>jar-with-dependencies</descriptorRef>
+                    </descriptorRefs>
+                    <archive>
+                        <manifest>
+                            <mainClass>csl.infolab.analyze.TestCodeHistoryBrowser</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+
+                <executions>
+                    <execution>
+                        <id>make-assembly</id>
+                        <phase>package</phase>
+                        <goals>
+                            <goal>single</goal>
+                        </goals>
+                        <configuration>
+                            <appendAssemblyId>false</appendAssemblyId>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
+    </build>
+
+    <properties>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
+    </properties>
+
+    <!-- you can use the repository "lib/local-repo" for dataproclib: the directory can be constructed by
+          mvn dependency:copy-dependencies  \
+               -Dmdep.useRepositoryLayout=true -Dmdep.copyPom=true  \
+               -DoutputDirectory=lib/local-repo/ -DincludeArtifactIds=dataproclib
+    -->
+    <repositories>
+        <repository>
+            <id>csl-ssh</id>
+            <url>scp://csl.ec.t.kanazawa-u.ac.jp/opt/mvn</url>
+        </repository>
+        <!--
+        <repository>
+            <id>local-repo</id>
+            <url>file://${basedir}/lib/local-repo</url>
+        </repository>
+        -->
+    </repositories>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.googlecode.java-diff-utils</groupId>
+            <artifactId>diffutils</artifactId>
+            <version>1.3.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>csl</groupId>
+            <artifactId>dataproclib</artifactId>
+            <version>1.4-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
+
+
+    <distributionManagement>
+        <repository>
+            <id>csl-ssh</id>
+            <url>scp://csl.ec.t.kanazawa-u.ac.jp/opt/mvn</url>
+        </repository>
+    </distributionManagement>
+</project>

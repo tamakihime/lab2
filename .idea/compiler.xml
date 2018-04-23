@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for infolab2" enabled="true">
+        <sourceOutputDir name="../../AppData/Local/Temp/infolab2-target/generated-sources/annotations" />
+        <sourceTestOutputDir name="../../AppData/Local/Temp/infolab2-target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="infolab2" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="infolab2" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+</project>
