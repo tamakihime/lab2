@@ -15,7 +15,7 @@ public class Exercise3 {
         TestCodeRunner.run(Exercise3.class);
     }
 
-     /*
+
     public void test01Root() {
         new TurtleTree().root();
         Exercise3Checker.checkRoot();
@@ -40,7 +40,7 @@ public class Exercise3 {
         new TurtleTree().runButton();
         Exercise3Checker.checkExpandedByButtonRecursively();
     }
-
+/*
     public void test06FileTurtleCreateChildren() {
         Exercise3Checker.setupSrcLibDirForTest();
         FileTurtle srcLibTurtle = new FileTurtle(new File("src-lib"));

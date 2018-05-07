@@ -58,10 +58,7 @@ public class  TurtleDouble{
        t.penDown();
        t.say("start!");
        for(int i=0; i<10; i++){
-           for(int j=0; j<10; j++){
-               t.move(i);
-               t.sleep(10);
-           }
+           for(int j=0; j<10; j++){ t.move(i);t.sleep(10); }
            t.rotate(90);
        }
        t.say("end!");

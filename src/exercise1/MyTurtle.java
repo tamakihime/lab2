@@ -12,4 +12,5 @@ public class MyTurtle extends Turtle{
     public void sayTotalDistance(){
         say("Total: " + this.totalDistance);
     }
-}
+    }
+
