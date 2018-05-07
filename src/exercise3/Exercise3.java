@@ -40,7 +40,7 @@ public class Exercise3 {
         new TurtleTree().runButton();
         Exercise3Checker.checkExpandedByButtonRecursively();
     }
-/*
+
     public void test06FileTurtleCreateChildren() {
         Exercise3Checker.setupSrcLibDirForTest();
         FileTurtle srcLibTurtle = new FileTurtle(new File("src-lib"));
@@ -237,7 +237,7 @@ public class Exercise3 {
         new TurtleTree().runFileTree();
         Exercise3Checker.checkFileTreeExpandingWithClosing();
     }
-
+/*
     public void test13FileSearch() {
         Exercise3Checker.setupSrcLibDirForTest();
         new TurtleTree().runFileTree();
